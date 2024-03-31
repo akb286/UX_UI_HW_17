@@ -1,4 +1,9 @@
-
+/* ENTIRE SITE */
+.home-page {
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Set left and right margins to auto */
+  text-align: center; /* Optionally center-align inline elements */
+}
 /* NAVBAR SECTION */
 a { 
   cursor: pointer;
@@ -13,11 +18,13 @@ a:hover {
 
 .header-main {
     width: 100%;
-    height: 20px;
+    height: 30px;
     background-color: white;
     display: flex;
     justify-content: space-between;
     text-decoration: none;
+    padding-top: 30px;
+    padding-bottom: 1px;
   }
 
 .header-main-logo {
@@ -28,8 +35,9 @@ a:hover {
   display: flex;
 }
 .header-main-logo img {
-  height: 60px;
+  height: 100px;
   align-self: center;
+  padding-top: 25px;
 }
 
 .header-main-nav {
@@ -94,7 +102,7 @@ a:hover {
 
 
 /* ABOUT ME SECTION */
-.container {
+.container-about {
   max-width: 1200px; 
   margin: 0 auto;
   padding: 0 50px; 
@@ -113,7 +121,6 @@ a:hover {
 }
 
 .text h2 {
-  font-size: 2em;
   margin-bottom: 20px;
   font-family: 'Montserrat';font-size: 32px;
 }
@@ -156,7 +163,7 @@ a:hover {
 }
 
 /* PROJECTS SECTION */
-.container {
+.container-cs {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px; 
@@ -218,11 +225,12 @@ body {
   font-family: 'Montserrat';font-size: 16px;
 }
 
-.container {
+.container-skills {
   display: flex;
   justify-content: space-around;
-  margin: 0 20px; /* Thick margins on each side */
+  margin: 0 20px;
   padding: 20px 0;
+
 }
 
 .column {
@@ -253,45 +261,39 @@ body {
 
 
 /* SOFT SKILLS SECTION */
-.container-2 {
-  display: flex;
-  justify-content: center; 
-  margin: 20px auto; 
+.skills-section {
+  text-align: center;
+  font-family: 'Montserrat';font-size: 18px;
   background-color: #f8f2ee;
-  padding: 20px;
+  padding: 60px;
 }
 
-.column-2 {
-  flex: 0 0 10%; 
-  margin: 0 10px; 
-}
-
-.step-2 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+.skills-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  background-color: purple; 
-  color: white; 
+  margin-top: 20px;;
 }
 
-p {
-  margin-left: 10px;
-  font-family: 'Montserrat';font-size: 18px;
+.skill {
+  margin: 0 30px;
 }
 
-.class-title {
+.skill-number {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: purple;
+  border-radius: 50%;
+  color: white;
+  line-height: 30px;
   text-align: center;
 }
+
+.skill-name {
+  margin-left: 5px;
+}
+
 
 /* FORM SECTION */
 
