@@ -354,6 +354,7 @@ body {
 
 .full-width-form button:hover {
   background-color: #A5668B;
+  color: white;
 }
 .form-title {
   text-align: center;
