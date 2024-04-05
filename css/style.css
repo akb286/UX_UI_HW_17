@@ -216,11 +216,13 @@ a:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .purple-button:hover {
   background-color: #a5668b;
+  color: white;
 }
 .card-image img {
   width: 350px; /* Adjust the width of the image */
