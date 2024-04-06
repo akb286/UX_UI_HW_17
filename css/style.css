@@ -5,113 +5,90 @@ body {
 }
 
 .home-page {
-  width: 80%; /* Adjust the width as needed */
-  margin: 0 auto; /* Set left and right margins to auto */
-  text-align: center; /* Optionally center-align inline elements */
+  width: 80%;
+  margin: 0 auto; 
+  text-align: center; 
 }
-/* main {
-  max-width: 1200px;
-  display: block;
-  margin: 0 auto;
-} */
 
 /* NAVBAR SECTION */
-a { 
-  cursor: pointer;
-  color: black;
-  line-height: 18px;
-  font-family: 'Montserrat'; font-size: 20px;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-a:hover {
-  color: purple;
+body{
+  min-height: 50vh;
+  background: url('laptop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.header-main {
-    width: 100%;
-    /* max-width: 1500px; */
-    height: 30px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    padding-top: 30px;
-    padding-bottom: 1px;
-  }
-
-.header-main-logo {
-  width: fit-content;
-  height: 100%;
+nav{
   background-color: white;
-  padding-left: 60px;
+}
+nav ul{
+  width: 100%;
+  list-style: none;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-.header-main-logo img {
-  height: 100px;
-  align-self: center;
-  padding-top: 25px;
+nav li{
+  height: 50px;
 }
-
-.header-main-nav {
-  width: fit-content;
+nav a{
   height: 100%;
-  background-color: white;
-}
-
-.header-main-nav ul {
-  display: inline-block;
-  margin-right:50px;
-   
-}
-
-.header-main-nav ul li {
-  display: inline;
-  float: left;
-  display: inline-block;
-  margin-right:50px;
-}
-
-.header-main-nav ul li a {
- color: black;
+  padding: 0 30px;
   text-decoration: none;
-  position: relative;
-}
-
-.header-main-nav ul li a::before {
-  content: '';
-  position: absolute;
-  bottom: -2px; /* Position it below the text */
-  left: 0;
-  width: 0; /* Initially set width to 0 */
-  height: 2px; /* Set height to the desired thickness */
-  background-color: purple; /* Set the color */
-  transition: width 0.3s ease; /* Add transition effect */
-  color: purple;
-}
-.header-main-nav ul li a:hover::before {
-  width: 100%; /* Expand the line on hover */
-}
-
-
-
-.header-main-sm {
-  width: fit-content;
-  height: 100%;
-  background-color: white;
-  padding-right: 60px; 
   display: flex;
   align-items: center;
-  column-gap: 10px;
+  color: black;
 }
-  
-.header-main-sm-linkedin {
-    width: 20px;
-    height: 20px;
-    background-image: url(https://assets.dryicons.com/uploads/icon/svg/8337/a347cd89-1662-4421-be90-58e5e8004eae.svg);
-  background-repeat: no-repeat;
-  background-size: cover; 
+nav a:hover{
+  background-color: #f0f0f0;
+}
+
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 50vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+}
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+    
   }
 
+}
 
 /* ABOUT ME SECTION */
 .container-about {
@@ -368,3 +345,7 @@ body {
   text-align: center;
   color: white;
 }
+
+/* MEDIA QUERY */
+/* @media only screen and (max-width: 600px) {
+} */

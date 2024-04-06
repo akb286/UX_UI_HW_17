@@ -4,30 +4,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/style.css" type="text/css" rel="stylesheet"> 
   <link href="css/index.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
 <!-- NAV/HERO SECTION--> 
-   <header class="header-main">
-        <div class="header-main-logo">
-          <img src="images/ab-logo-circle.png" alt="Logo">
-        </div>
-        <nav class="header-main-nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </nav>
-        <div class="header-main-sm">
-          <a href="https://www.linkedin.com/in/alicia-baker/">
-            <div class="header-main-sm-linkedin"></a>
-        </div>
-      </header>
+  <header class="header-main">
+    
+    <!-- MOBILE MENU -->
+    <nav>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="case-study-1.html">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="https://www.linkedin.com/in/alicia-baker/" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
+
+      </ul>
+      <!-- REG MENU -->
+      <ul>
+        <li><a href="#"><img src="images/ab-logo-circle.png" alt="Logo" width="20%"></a></li>
+        <li class="hideOnMobile"><a href="#">Home</a></li>
+        <li class="hideOnMobile"><a href="#">About</a></li>
+        <li class="hideOnMobile"><a href="case-study-1.html">Projects</a></li>
+        <li class="hideOnMobile"><a href="#">Contact</a></li>
+        <li><a href="https://www.linkedin.com/in/alicia-baker/" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
+
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+      </ul>
+    </nav>
+  
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
 
       <main>
         <div class="main-intro">
           <div class="overlay"></div>
-          <p>Howdy!</p>
           <h1>UI/UX & Website Designer, Blogger, & Author</h1>
           <a href="#" class="cta-button">Let's Talk</a>
         </div>
