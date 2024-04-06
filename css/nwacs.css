@@ -109,7 +109,7 @@ main .main-intro {
   }
   
   .column {
-    width: 10%; /* Adjust column width as needed */
+    width: 50%; /* Adjust column width as needed */
     display: inline-block;
     text-align: center;
   }
