@@ -10,17 +10,13 @@ body {
   text-align: center; 
 }
 
-/* NAVBAR SECTION */
+/* NAVBAR SECTION */ 
 *{
   margin: 0;
   padding: 0;
 }
 body{
   min-height: 50vh;
-  background: url('laptop.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 nav{
@@ -155,14 +151,14 @@ nav li:first-child{
 
 /* PROJECTS SECTION */
 .container-cs {
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0 20px; 
 }
 
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* Stack elements vertically on mobile */
   width: 100%;
   background-color: #F4F1ED;
   border-radius: 10px;
@@ -172,11 +168,12 @@ nav li:first-child{
 }
 
 .card img {
-  object-fit: cover;
+  width: 100%; /* Allow the image to fill its container */
+  max-width: 100%; /* Ensure the image doesn't overflow its container */
+  height: auto;
 }
 
 .content {
-  flex: 1;
   padding: 20px;
 }
 
@@ -203,11 +200,27 @@ nav li:first-child{
   background-color: #a5668b;
   color: white;
 }
-.card-image img {
-  width: 350px; /* Adjust the width of the image */
-  height: auto;
-  margin: 20px;
+
+/* CSS for mobile responsiveness */
+@media (min-width: 768px) {
+  .card {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 10px auto; /* Center the card */
+    flex-direction: row; /* Revert to row layout for larger screens */
+  }
+
+  .card-image {
+    width: 20%; /* Set a fixed width for the image on larger screens */
+    padding: 20px;
+  }
+
+  .content {
+    width: 60%; /* Set a width for the content on larger screens */
+    padding: 20px;
+  }
 }
+
+
 
 /* HARD SKILLS SECTION */
 
@@ -248,20 +261,22 @@ nav li:first-child{
 /* SOFT SKILLS SECTION */
 .skills-section {
   text-align: center;
-  font-family: 'Montserrat';font-size: 18px;
+  font-family: 'Montserrat';
+  font-size: 18px;
   background-color: #f8f2ee;
-  padding: 60px;
+  padding: 30px; /* Reduce padding for smaller screens */
 }
 
 .skills-container {
   display: flex;
+  flex-wrap: wrap; /* Allow skills to wrap to the next line on smaller screens */
   justify-content: center;
   align-items: center;
-  margin-top: 20px;;
+  margin-top: 20px;
 }
 
 .skill {
-  margin: 0 30px;
+  margin: 10px; /* Add some spacing between skills */
 }
 
 .skill-number {
@@ -278,6 +293,19 @@ nav li:first-child{
 .skill-name {
   margin-left: 5px;
 }
+
+/* CSS for mobile responsiveness */
+@media (max-width: 768px) {
+  .skills-container {
+      flex-direction: column; /* Stack skills vertically on smaller screens */
+  }
+
+  .skill {
+      margin: 10px auto; /* Center each skill horizontally on smaller screens */
+  }
+}
+
+
 
 
 /* FORM SECTION */
@@ -345,7 +373,3 @@ body {
   text-align: center;
   color: white;
 }
-
-/* MEDIA QUERY */
-/* @media only screen and (max-width: 600px) {
-} */
