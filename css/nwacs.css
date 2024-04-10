@@ -4,11 +4,14 @@ body {
     font-family: 'Montserrat';font-size: 16px;
   }
 
+
   .home-page {
     width: 80%; /* Adjust the width as needed */
     margin: 0 auto; /* Set left and right margins to auto */
     text-align: center; /* Optionally center-align inline elements */
   }
+
+
 main .main-intro {
     width: 100%;
     height: 60vh;
@@ -205,8 +208,8 @@ main .main-intro {
   
   .image-container h2 {
     margin-bottom: 10px;
-    text-decoration: underline; 
-    color: purple; 
+    text-decoration: none; 
+    color: black; 
   }
   
   .image-container img {
@@ -227,4 +230,10 @@ main .main-intro {
   .image-container {
     margin: 0; /* Remove horizontal margin */
   }
+}
+
+/* FORM */
+.copyright {
+  text-align: center;
+  color: white;
 }
